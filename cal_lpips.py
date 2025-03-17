@@ -9,7 +9,6 @@ loss_fn = LPIPS(net='vgg')
 
 
 def load_image(image_path):
-    """ 加载图像并转换为模型需要的格式（归一化到[-1, 1]） """
     img = Image.open(image_path).convert('RGB')
     img = img.resize((256, 256), Image.BICUBIC) 
     img_np = np.array(img).astype(np.float32) / 127.5 - 1 
@@ -38,7 +37,7 @@ def calculate_lpips(folder1, folder2):
     print("lpips: %.4f"%(np.mean(lpips)))
 
 
-folder1 = '/public/lsm/Data/SGSRD/google_test'
-folder2 = '/public/lsm/SGSRNet/training_results/SGSRNet3/images/result_images'
+folder1 = 'google_test'
+folder2 = 'result_images'
 
 calculate_lpips(folder1, folder2)

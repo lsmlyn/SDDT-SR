@@ -1,19 +1,14 @@
 import argparse
 import os
-import copy
 import itertools
 import torch
-from torch import nn
 import pandas as pd
-import torch.optim as optim
-import torch.backends.cudnn as cudnn
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 from torch.autograd import Variable
 from models import Generator
 from models import Discriminator
-from data_utils import TrainDatasetFromFolder, ValDatasetFromFolder, TrainDatasetFromFolder_2,ValDatasetFromFolder_2,p2ploss,cal_psnr
-from math import log10
+from data_utils import TrainDatasetFromFolder_2,ValDatasetFromFolder_2,p2ploss,cal_psnr
 import pytorch_ssim
 from utils import weights_init_normal
 from utils import ReplayBuffer
@@ -93,11 +88,11 @@ if __name__ == '__main__':
 
 
 
-    train_set = TrainDatasetFromFolder_2('/public/lsm/Data/SGSRD/sentinel',
-                                           '/public/lsm/Data/SGSRD/google',
+    train_set = TrainDatasetFromFolder_2('SGSRD/sentinel',
+                                           'SGSRD/google',
                                            upscale_factor=UPSCALE_FACTOR, patch_size=PATCH_SIZE)
-    val_set = ValDatasetFromFolder_2('/public/lsm/Data/SGSRD/sentinel_val',
-                                       '/public/lsm/Data/SGSRD/google_val', patch_size=PATCH_SIZE,
+    val_set = ValDatasetFromFolder_2('SGSRD/sentinel_val',
+                                       'SGSRD/google_val', patch_size=PATCH_SIZE,
                                        upscale_factor=UPSCALE_FACTOR)
 
     train_loader = DataLoader(dataset=train_set, num_workers=4, batch_size=BATCHSIZE, shuffle=True, drop_last=True)
