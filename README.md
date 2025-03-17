@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/91d60019-bfa3-49c9-b4fd-4360deecd421)## SDDT-SR
+![image](https://github.com/user-attachments/assets/c67479bb-ca81-440f-a252-38e5361944e1)
+## SDDT-SR
 
 The pytorch implementation for **SDDT-SR** in paper "[SDDT-SR: A Scale-Decoupling Super-Resolution Network With Domain Transfer for Heterogeneous Images](https://ieeexplore.ieee.org/document/10769009)" 
 on [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4609443).  
@@ -10,13 +11,9 @@ on [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sen
 
 ## Datasets
 ### Sentinel 2-Google Image Super-Resolution Dataset (SGSRD)
-A dataset dedicated to image super-resolution in heterogeneous remote sensing images. Sentinel-2 images and Google Images were chosen as sources, as a way to fit the requirement that LRI and HRI come from 
-different sensors and have large scale on resolution differences. We downloaded sentine1-2 images and Google satellite images from Zengcheng District, Guangzhou City, Guangdong Province, China, from 2018 to 2020. 
-The sentinel-2 images with 10-metre resolution are used as the LRIs, while the 1.3-m resolution Google images are used as the HRIs. By nonoverlapping sampling, the sentinel-2 images were cropped into patches of size of 64 × 64, 
-and the Google images were cropped into patches of size of 512 × 512 accordingly
+A dataset dedicated to image super-resolution in heterogeneous remote sensing images. Sentinel-2 images and Google Images were chosen as sources, as a way to fit the requirement that LRI and HRI come from different sensors and have large scale on resolution differences. We downloaded sentine1-2 images and Google satellite images from Zengcheng District, Guangzhou City, Guangdong Province, China, from 2018 to 2020. The sentinel-2 images with 10-metre resolution are used as the LRIs, while the 1.3-m resolution Google images are used as the HRIs. By nonoverlapping sampling, the sentinel-2 images were cropped into patches of size of 64 × 64, and the Google images were cropped into patches of size of 512 × 512 accordingly
 
-- Download the SGSRD Dataset: [OneDrive](https://1drv.ms/u/s!AlRAU4OtVo9zcamTmyagGfylYss?e=LpG2XF) | [Baidu](https://pan.baidu.com/s/1_qKdEx3PeNTUfMPsgBltjA?pwd=to0q)
-
+- Download the SGSRD Dataset: [Baidu](https://pan.baidu.com/s/19GUCqkx8qJ9o6wA4o6Qc-A?pwd=9474)
 
 ## Citation
 
