@@ -230,7 +230,7 @@ if __name__ == '__main__':
             sr_uav = netG_sr(lr_uav_resize)
             pred_sr_uav = netD_sr(sr_uav)
             pred_sr_rs = netD_sr(sr_rs)
-            pred_sr_uav_real = netD_sr(hr)
+            pred_sr_uav_real = netD_sr(target)
             loss_sr_uav_d_real = criterion_GAN(pred_sr_uav_real, target_real)
             loss_sr_uav_d = criterion_GAN(pred_sr_uav, target_fake)
             loss_sr_rs_d = criterion_GAN(pred_sr_rs, target_fake)
@@ -313,3 +313,4 @@ if __name__ == '__main__':
         data_frame = pd.DataFrame(
             data={'Loss': results['loss'], 'PSNR': results['psnr'], 'SSIM': results['ssim']},
             index=range(1, epoch + 1))
+
